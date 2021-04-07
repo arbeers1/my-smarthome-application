@@ -1,8 +1,5 @@
 package main;
 
-//import java.io.IOException;
-//import java.net.URL;
-//import java.net.URLConnection;
 import java.util.ArrayList;
 import phillips.hue.HueController;
 import phillips.hue.Light;
@@ -16,22 +13,7 @@ public class BSmart {
   private HueController hc; //Interfaces with hue api
   private ArrayList<Light> lightList; // list of lights
   
-  public BSmart() {
-//Was used to ping for internet connection to prevent app starting prior to the raspberry pi
-//accessing the internet which would prevent some values from loading. Commented out for now.
-//    boolean internetConnected = false;
-//    do {
-//      try{
-//        URL url = new URL("http://www.google.com");
-//        URLConnection connection = url.openConnection();
-//        connection.connect();
-//        internetConnected = true;
-//      }catch(IOException e) {
-//        internetConnected = false;
-//      }
-//      delay(200);
-//    }while(!internetConnected);
-    
+  public BSmart() { 
     hc = new HueController();
     ArrayList<String> lightIDS = new ArrayList<String>();
     // Receives light Ids
